@@ -3,6 +3,7 @@ package com.plottwist.wirelessredstone;
 import com.plottwist.wirelessredstone.block.ModBlocks;
 import com.plottwist.wirelessredstone.item.ModItemGroups;
 import com.plottwist.wirelessredstone.item.ModItems;
+import com.plottwist.wirelessredstone.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,5 +22,7 @@ public class WirelessRedstone implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModBlocks.registerModBlocks();
+
+		ModSounds.registerSounds();
 	}
 }

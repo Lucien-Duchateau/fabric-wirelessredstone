@@ -1,12 +1,14 @@
 package com.plottwist.wirelessredstone.block;
 
+import com.plottwist.wirelessredstone.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.registry.Registry;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
+import net.minecraft.sound.SoundCategory;
+
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 public class SenderBlock extends Block {
@@ -17,10 +19,6 @@ public class SenderBlock extends Block {
         super(settings);
     }
 
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        // No properties to append
-    }
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
@@ -41,6 +39,8 @@ public class SenderBlock extends Block {
             serverWorld.getPlayers().forEach(player ->
                     player.sendMessage(Text.literal("Redstone signal received at " + pos), false)
             );
+            serverWorld.playSound(null, pos, ModSounds.HARVEST_SUGARCANE, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
     }
+
 }
