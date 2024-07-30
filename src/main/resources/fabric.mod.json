@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wirelessredstone",
+	"version": "${version}",
+	"name": "Wireless Redstone",
+	"description": "Redstone that can notify your phone",
+	"authors": [
+		"PlotTwist"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/wirelessredstone/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.plottwist.wirelessredstone.WirelessRedstone"
+		],
+		"client": [
+			"com.plottwist.wirelessredstone.WirelessRedstoneClient"
+		],
+		"fabric-datagen": [
+			"com.plottwist.wirelessredstone.WirelessRedstoneDataGenerator"
+		]
+	},
+	"mixins": [
+		"wirelessredstone.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
