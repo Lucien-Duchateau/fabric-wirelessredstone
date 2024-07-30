@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "wirelessredstone:redstoneite"
+    }
+  },
+  "result": {
+    "item": "wirelessredstone:sender_block"
+  }
+}

@@ -1,4 +1,7 @@
 {
   "item.wirelessredstone.redstoneite": "Redstoneite",
+
+  "block.wirelessredstone.sender_block": "Sender Block",
+
   "itemgroup.wirelessredstone": "Wireless Redstone"
 }

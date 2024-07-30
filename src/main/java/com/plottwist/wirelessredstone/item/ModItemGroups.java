@@ -1,6 +1,7 @@
 package com.plottwist.wirelessredstone.item;
 
 import com.plottwist.wirelessredstone.WirelessRedstone;
+import com.plottwist.wirelessredstone.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
@@ -17,6 +18,8 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.wirelessredstone"))
                     .icon(() -> new ItemStack(ModItems.REDSTONEITE)).entries((displayContext, entries) -> {
                         entries.add(ModItems.REDSTONEITE);
+
+                        entries.add(ModBlocks.SENDER_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {
